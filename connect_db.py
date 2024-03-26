@@ -16,7 +16,6 @@ except Exception as e:
     print(f"Error reading config file: {e}")
     raise e
 
-
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 session = SessionLocal()
